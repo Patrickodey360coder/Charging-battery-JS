@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+            .container{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top:0;
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+
+            #battery{
+                font-size: 5em;
+                text-align: center;
+                
+                color: green;
+            }
+
+            .header{
+                width: 100vw;
+                background-color: green;
+                padding:5px;
+
+            }
+
+            .header h1{
+                text-align: center;
+                color: white;
+                font-family: monospace;
+
+}
+
+            .intro p{
+                padding: 1.2em;
+                font-size: 22px;
+                text-align: center;
+                text-justify: initial;
+                font-family: monospace;   
+            }
+            
+            </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Animation with Javascript</h1>
+    </div>
+    
+
+    <div class="intro"><p>
+            Javascript Animated Charging battery by Patrick Odey.</a> 
+    </p></div>
+    
+    
+    <div class="container">
+        
+        <div id="battery" class="fa"></div>
+        
+        
+    </div>   
+    
+    <!--unicode
+    f244
+    f243
+    f242
+    f241
+    f240
+    -->
+
+    <script>
+        function animateBattery(){
+            let myBattery = document.getElementById('battery');
+            myBattery.innerHTML= "&#xf244;"
+
+            setTimeout(function(){
+                myBattery.innerHTML = "&#xf243;";
+            }, 1000);
+
+            setTimeout(function(){
+                myBattery.innerHTML = "&#xf242;"
+            }, 2000);
+
+            setTimeout(function(){
+                myBattery.innerHTML = "&#xf241;"
+            }, 3000);
+
+            setTimeout(function(){
+                myBattery.innerHTML = "&#xf240;"
+            }, 4000);
+        }
+        
+        animateBattery();
+
+        setInterval(animateBattery, 5000);
+    
+    
+    </script>
+</body>
+</html>
